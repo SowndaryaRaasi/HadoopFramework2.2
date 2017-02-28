@@ -1,0 +1,30 @@
+                                                   Hadoop Framework
+                                                       Assignment 2.2
+
+
+1.HDFS
+      It stands for HaDoop File System.
+      It is based on GFS(Google File System) which is a master-slave design where master is a single namenode and slave can be any number of datanodes.
+      HDFS is used to store very large amounts of data in a contiguous manner where as traditional file systems do not store it in this way.
+      COMPONENTS OF HDFS:
+            NAME NODE:It stores the metadata i.e., information regarding the data present in datanodes.
+            SECONDRY NAME NODE:It helps in merging fsimage and edit logs and then give fresh updates to the namenode regarding metadata of datanode.
+            DATA NODE:  It contains the actual data that is to be stored.
+              
+2)Hadoop Cluster:
+     * A Hadoop cluster is a special type of 
+        computational cluster(set of loosely or tightly connected computers that work together so that they are treated as a single machine)  
+        designed specifically for storing and analyzing huge amounts of unstructured data in a distributed computing environment.
+     *A large number of nodes are connected with each other, whose details are stored in a namenode.
+     *Whenever some data is to be stored, namenode gives the details of free space in the datanodes in which new data can be stored.
+     *Likewise,namenode also gives the details of information present in the datanodes in the cluster that is to be retrieved.
+
+
+
+3)HDFS Blocks:
+     *A file that is to be stored in HDFS is divided into several blocks, each of 128MB by default.
+     *These blocks are arranged in a continuous manner inorder to
+              Reduce disk seek time so that data can be read in less rotations of hard disk.
+     *Where as in local file system, data is not stored in continuous manner.This leads to increase in seek time which inturn reduces the efficiency.
+     *Storage of HDFS blocks in a continuous manner improves efficiency by reducing the data retrieval time.
+        
